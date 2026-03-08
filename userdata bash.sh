@@ -44,7 +44,7 @@ echo " write the Caddyfile"
 
 cat << 'EOF' > /etc/caddy/Caddyfile
 
-#  GNU nano 7.
+#!/bin/bash
 # The Caddyfile is an easy way to configure your Caddy web server.
 #
 # Unless the file starts with a global options block, the first
@@ -108,7 +108,11 @@ echo "start the Caddy server"
 
 sudo systemctl start caddy
 
-# provide caddyfile access to ubuntu user to save the file from VSCode SSH process
+# provide caddyfile access to ubuntu user to save the file from VSCode SSH 
+
+
+
+process
 sudo chown ubuntu:ubuntu /etc/caddy/Caddyfile
 sudo chmod 644 /etc/caddy/Caddyfile
 
